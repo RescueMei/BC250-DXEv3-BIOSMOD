@@ -13,7 +13,7 @@ Drivers used:
 - https://github.com/RescueMei/BC250-DXEv3-ACPI-Driver
 
 
-# CAUTION: Not all cores may be able to be enabled. Uneven numbers of cores are not allowed (if more than one CCX is active), and the number of cores in each CCX must be equal.
+# CAUTION: Not all cores may be able to be enabled. Uneven numbers of cores are not allowed (if more than one CCX is active), CCX0 MUST always have at least one enabled core, and the total number of cores in each CCX must be equal if both CCX0 and CCX1 are active.
 
 Credit to https://github.com/rw-r-r-0644 for creating an implementation of the core mask write, smu unlock, and smu patch, which I used as a reference when making the DXE drivers.
 
