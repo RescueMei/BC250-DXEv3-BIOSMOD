@@ -1,5 +1,5 @@
 # BC250-DXEv3-BIOSMOD
-Central repo for the v3 of my bios patch, including three DXE drivers for CPU core unlock WITH ARBITRARY* CORE SELECTION, ACPI injection, SMU unlock, SMU patching, a new menu driver the leaves the original PXE boot functionality available, and cold boot for learning the factory core mask!
+Central repo for the v3 of my bios patch, including six DXE drivers for CPU core unlock WITH ARBITRARY* CORE SELECTION, ACPI injection, SMU unlock, SMU patching, a new menu driver the leaves the original PXE boot functionality available, and cold boot for learning the factory core mask!
 
 \* Special rules apply to the activation of cores. See https://github.com/RescueMei/BC250-DXEv3-Core-Unlock for more information
 
