@@ -12,6 +12,8 @@ Drivers used:
 - https://github.com/RescueMei/BC250-DXEv3-Core-Unlock
 - https://github.com/RescueMei/BC250-DXEv3-ACPI-Driver
 
+Drivers built with:
+- https://github.com/RescueMei/BC250-DXEv3-DXEBUILD
 
 # CAUTION: Not all cores may be able to be enabled. Uneven numbers of cores are not allowed (if more than one CCX is active), CCX0 MUST always have at least one enabled core, and the total number of cores in each CCX must be equal if both CCX0 and CCX1 are active.
 
