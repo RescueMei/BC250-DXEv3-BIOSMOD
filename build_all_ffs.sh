@@ -18,6 +18,7 @@ DRIVERS=(
   BC250-DXEv3-ACPI-Driver
   BC250-DXEv3-Cold-Boot
   BC250-DXEv3-Core-Unlock
+  BC250-DXEv3-CU-Unlock
   BC250-DXEv3-Menu-Driver
   BC250-DXEv3-SMU-Patch
   BC250-DXEv3-SMU-Unlock

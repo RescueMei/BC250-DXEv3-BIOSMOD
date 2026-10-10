@@ -16,3 +16,6 @@
 [submodule "BC250-DXEv3-ACPI-Driver"]
 	path = BC250-DXEv3-ACPI-Driver
 	url = git@github.com:RescueMei/BC250-DXEv3-ACPI-Driver.git
+[submodule "BC250-DXEv3-CU-Unlock"]
+	path = BC250-DXEv3-CU-Unlock
+	url = git@github.com:RescueMei/BC250-DXEv3-CU-Unlock.git
