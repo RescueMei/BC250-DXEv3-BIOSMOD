@@ -20,6 +20,7 @@ DRIVERS=(
   BC250-DXEv3-Core-Unlock
   BC250-DXEv3-CU-Unlock
   BC250-DXEv3-Menu-Driver
+  BC250-DXEv3-SMU-Governor
   BC250-DXEv3-SMU-Patch
   BC250-DXEv3-SMU-Unlock
 )

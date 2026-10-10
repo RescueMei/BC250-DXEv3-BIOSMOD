@@ -19,3 +19,6 @@
 [submodule "BC250-DXEv3-CU-Unlock"]
 	path = BC250-DXEv3-CU-Unlock
 	url = git@github.com:RescueMei/BC250-DXEv3-CU-Unlock.git
+[submodule "BC250-DXEv3-SMU-Governor"]
+	path = BC250-DXEv3-SMU-Governor
+	url = git@github.com:RescueMei/BC250-DXEv3-SMU-Governor.git
