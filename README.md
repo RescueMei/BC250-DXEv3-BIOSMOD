@@ -1,5 +1,5 @@
 # BC250-DXEv3-BIOSMOD
-Central repo for the v3 of my bios patch, including six DXE drivers for CPU core unlock WITH ARBITRARY* CORE SELECTION, ACPI injection, SMU unlock, SMU patching, a new menu driver the leaves the original PXE boot functionality available, and cold boot for learning the factory core mask!
+Central repo for the v3 of my bios patch, including eight DXE drivers for CPU core unlock WITH ARBITRARY* CORE SELECTION, GPU CU (WGP) unlock, an in-SMU GPU governor, ACPI injection, SMU unlock, SMU patching, a new menu driver that leaves the original PXE boot functionality available, and cold boot for learning the factory core mask!
 
 \* Special rules apply to the activation of cores. See https://github.com/RescueMei/BC250-DXEv3-Core-Unlock for more information
 
@@ -10,16 +10,32 @@ Drivers used:
 - https://github.com/RescueMei/BC250-DXEv3-SMU-Patch
 - https://github.com/RescueMei/BC250-DXEv3-Cold-Boot
 - https://github.com/RescueMei/BC250-DXEv3-Core-Unlock
+- https://github.com/RescueMei/BC250-DXEv3-CU-Unlock
+- https://github.com/RescueMei/BC250-DXEv3-SMU-Governor
 - https://github.com/RescueMei/BC250-DXEv3-ACPI-Driver
 
 Drivers built with:
 - https://github.com/RescueMei/BC250-DXEv3-DXEBUILD
 
-# CAUTION: Not all cores may be able to be enabled. Uneven numbers of cores are not allowed (if more than one CCX is active), CCX0 MUST always have at least one enabled core, and the total number of cores in each CCX must be equal if both CCX0 and CCX1 are active.
+# CAUTION: Not all cores may be able to be enabled. Uneven numbers of cores are not allowed (if more than one CCX is active), CCX0 MUST always have at least one enabled core, and the total number of cores in each CCX must be equal if both CCX0 and CCX1 are active. On the GPU side, CUs are enabled per WGP (two CUs): custom CU profiles must keep at least one WGP enabled in every bank, and the GPU CU/governor options require SMU Unlock.
 
 Credit to https://github.com/rw-r-r-0644 for creating an implementation of the core mask write, smu unlock, and smu patch, which I used as a reference when making the DXE drivers.
 
 ## For how to use the patch to apply to the BC250_3.00_CHIPSETMENU.ROM BIOS, please see the bottom of this readme
+
+# Building the drivers
+
+This repo (`TheBigOne` branch) tracks every driver as a git submodule — the
+menu driver follows the `BC250-DXEv3-TheBigOne` branch (GPU-CU menu section),
+and `BC250-DXEv3-CU-Unlock` / `BC250-DXEv3-SMU-Governor` generate their SMU
+payload headers during the build's pre-build hook.
+
+Build all of them and collect the resulting `.ffs` files into `Build/Output/`:
+
+```bash
+git submodule update --init --recursive
+./build_all_ffs.sh
+```
 
 # Why DXE Drivers?
 
