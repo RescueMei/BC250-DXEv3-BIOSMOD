@@ -1,0 +1,18 @@
+[submodule "BC250-DXEv3-Menu-Driver"]
+	path = BC250-DXEv3-Menu-Driver
+	url = git@github.com:RescueMei/BC250-DXEv3-Menu-Driver.git
+[submodule "BC250-DXEv3-SMU-Unlock"]
+	path = BC250-DXEv3-SMU-Unlock
+	url = git@github.com:RescueMei/BC250-DXEv3-SMU-Unlock.git
+[submodule "BC250-DXEv3-SMU-Patch"]
+	path = BC250-DXEv3-SMU-Patch
+	url = git@github.com:RescueMei/BC250-DXEv3-SMU-Patch.git
+[submodule "BC250-DXEv3-Cold-Boot"]
+	path = BC250-DXEv3-Cold-Boot
+	url = git@github.com:RescueMei/BC250-DXEv3-Cold-Boot.git
+[submodule "BC250-DXEv3-Core-Unlock"]
+	path = BC250-DXEv3-Core-Unlock
+	url = git@github.com:RescueMei/BC250-DXEv3-Core-Unlock.git
+[submodule "BC250-DXEv3-ACPI-Driver"]
+	path = BC250-DXEv3-ACPI-Driver
+	url = git@github.com:RescueMei/BC250-DXEv3-ACPI-Driver.git
