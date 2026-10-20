@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Build every DXE driver used by the BC-250 v3 BIOS and collect the resulting
-# firmware files into Build/Output/.
+# firmware files (.ffs) and raw DXE images (.efi) into Build/Output/.
 #
 # Each driver is a git submodule and is built with its own build_ffs.sh (the
 # shared DXEBUILD wrapper).  Nested submodules (DXEBUILD) are initialized first.
@@ -29,7 +29,7 @@ echo "== initializing submodules"
 git -C "$ROOT" submodule update --init --recursive
 
 mkdir -p "$OUT"
-rm -f "$OUT"/*.ffs
+rm -f "$OUT"/*.ffs "$OUT"/*.efi
 
 for d in "${DRIVERS[@]}"; do
   if [[ ! -x "$ROOT/$d/build_ffs.sh" ]]; then
@@ -39,9 +39,9 @@ for d in "${DRIVERS[@]}"; do
   echo
   echo "== building $d"
   ( cd "$ROOT/$d" && ./build_ffs.sh )
-  find "$ROOT/$d/Build/Output" -maxdepth 1 -type f -name '*.ffs' -exec cp -f {} "$OUT/" \;
+  find "$ROOT/$d/Build/Output" -maxdepth 1 -type f \( -name '*.ffs' -o -name '*.efi' \) -exec cp -f {} "$OUT/" \;
 done
 
 echo
-echo "== collected FFS files in $OUT"
+echo "== collected FFS/EFI files in $OUT"
 ls -1 "$OUT"
