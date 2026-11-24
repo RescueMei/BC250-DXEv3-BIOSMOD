@@ -28,7 +28,9 @@ Credit to https://github.com/rw-r-r-0644 for creating an implementation of the c
 This repo (`TheBigOne` branch) tracks every driver as a git submodule — the
 menu driver follows the `BC250-DXEv3-TheBigOne` branch (GPU-CU menu section),
 and `BC250-DXEv3-CU-Unlock` / `BC250-DXEv3-SMU-Governor` generate their SMU
-payload headers during the build's pre-build hook.
+payload headers during the build's pre-build hook. `BC250-DXEv3-Shared` is
+pinned here as well: it holds the shared configuration ABI, SMU SRAM map, and
+the protocol ABI drift check that the integrated build runs before compiling.
 
 Build all of them and collect the resulting `.ffs` files into `Build/Output/`:
 
