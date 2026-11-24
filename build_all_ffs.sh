@@ -28,6 +28,12 @@ DRIVERS=(
 echo "== initializing submodules"
 git -C "$ROOT" submodule update --init --recursive
 
+echo
+echo "== checking protocol ABI against provider headers"
+python3 "$ROOT/BC250-DXEv3-Shared/tools/check_protocol_abi.py" \
+  --manifest "$ROOT/BC250-DXEv3-Shared/tools/protocols.json" \
+  --repo-root "$ROOT"
+
 mkdir -p "$OUT"
 rm -f "$OUT"/*.ffs "$OUT"/*.efi
 
