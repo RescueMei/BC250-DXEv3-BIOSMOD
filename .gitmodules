@@ -25,3 +25,6 @@
 [submodule "BC250-DXEv3-Shared"]
 	path = BC250-DXEv3-Shared
 	url = git@github.com:RescueMei/BC250-DXEv3-Shared.git
+[submodule "BC250-DXEv3-Driver-Info"]
+	path = BC250-DXEv3-Driver-Info
+	url = git@github.com:RescueMei/BC250-DXEv3-Driver-Info.git

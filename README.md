@@ -1,5 +1,5 @@
 # BC250-DXEv3-BIOSMOD
-Central repo for the v3 of my bios patch, including eight DXE drivers for CPU core unlock WITH ARBITRARY* CORE SELECTION, GPU CU (WGP) unlock, an in-SMU GPU governor, ACPI injection, SMU unlock, SMU patching, a new menu driver that leaves the original PXE boot functionality available, and cold boot for learning the factory core mask!
+Central repo for the v3 of my bios patch, including nine DXE drivers for CPU core unlock WITH ARBITRARY* CORE SELECTION, GPU CU (WGP) unlock, an in-SMU GPU governor, ACPI injection, SMU unlock, SMU patching, a new menu driver that leaves the original PXE boot functionality available, and cold boot for learning the factory core mask!
 
 \* Special rules apply to the activation of cores. See https://github.com/RescueMei/BC250-DXEv3-Core-Unlock for more information
 
@@ -13,6 +13,7 @@ Drivers used:
 - https://github.com/RescueMei/BC250-DXEv3-CU-Unlock
 - https://github.com/RescueMei/BC250-DXEv3-SMU-Governor
 - https://github.com/RescueMei/BC250-DXEv3-ACPI-Driver
+- https://github.com/RescueMei/BC250-DXEv3-Driver-Info
 
 Drivers built with:
 - https://github.com/RescueMei/BC250-DXEv3-DXEBUILD
@@ -28,7 +29,7 @@ Credit to https://github.com/rw-r-r-0644 for creating an implementation of the c
 This repo (`TheBigOne` branch) tracks every driver as a git submodule — the
 menu driver follows the `BC250-DXEv3-TheBigOne` branch (GPU-CU menu section),
 and `BC250-DXEv3-CU-Unlock` / `BC250-DXEv3-SMU-Governor` generate their SMU
-payload headers during the build's pre-build hook. `BC250-DXEv3-Shared` is
+payload headers during the build's pre-build hook. `BC250-DXEv3-Shared` and `BC250-DXEv3-Driver-Info` are
 pinned here as well: it holds the shared configuration ABI, SMU SRAM map, and
 the protocol ABI drift check that the integrated build runs before compiling.
 
